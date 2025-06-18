@@ -1,0 +1,105 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Alapbeállítások */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #FFFFD4; /* oldal háttérszíne */
+}
+
+/* Konténer - az oldal 70%-a, középre igazítva, barna kerettel */
+.container {
+  width: 70%;
+  border: 2px solid brown;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff; /* tartalmi rész háttérszíne */
+  color: #555; /* tartalmi rész betűszíne */
+  margin: 20px auto; /* középre igazítás */
+}
+
+/* Fejléc kép - teljes szélességű, alul margóval */
+.header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+.animate__jello {
+
+    display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+/* Menü stílus */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* balra igazítás */
+  background-color: #FF7F2A; /* menü háttérszín */
+  border-radius: 4px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white; /* menü betűszín */
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover hatás a menügombokon */
+.menu li a:hover {
+  background-color: #BF153F;
+}
+
+/* Egy-egy tartalmi szekció */
+.section {
+  background-color: #fff; /* tartalmi rész háttér */
+  padding: 15px;
+  border: 1px solid #d2b48c;
+  border-radius: 4px;
+  overflow: hidden; /* float kezelés */
+  box-sizing: border-box;
+  color: #555; /* tartalmi szöveg színe */
+}
+
+/* Az első szekció képe */
+.section img {
+  width: 30%;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* Lábléc - teljes oldal szélesség, a tartalomtól külön */
+.footer {
+  width: 100%;
+  height: 200px;
+  margin-top: 30px;
+  border-top: 2px solid brown;
+  box-sizing: border-box;
+  clear: both;
+}
+
+/* A beágyazott térkép kitölti a láblécet */
+.footer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
