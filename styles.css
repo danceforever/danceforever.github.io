@@ -49,7 +49,14 @@ html, body {
   background-color: #FF7F2A; /* menü háttérszín */
   border-radius: 4px;
 }
+.animate__flash{
+display: inline-block;
+  margin: 0 0.5rem;
 
+  animation: bounce; 
+  animation-duration: 2s;
+
+}
 .menu li a {
   text-decoration: none;
   color: white; /* menü betűszín */
