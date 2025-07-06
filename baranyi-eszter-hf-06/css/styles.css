@@ -1,11 +1,9 @@
-
 body {
   background-color: #D7B520;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   margin: 0;
 }
-
 
 .container {
   display: grid;
@@ -19,10 +17,9 @@ body {
   background-color: #fff;
   border: 2px solid #ddd;
   border-radius: 10px;
-  padding: 1em;
+  padding: 20px;
   gap: 1em;
 }
-
 
 header {
   grid-area: header;
@@ -38,7 +35,8 @@ header img {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;}
+  border-radius: 10px;
+}
 
 aside {
   grid-area: aside;
@@ -48,7 +46,6 @@ aside {
   background-color: #5a9bd5;
   color: #333;
 }
-
 
 aside nav ul {
   list-style: none;
@@ -80,14 +77,12 @@ form {
   flex-direction: column;
 }
 
-
 label {
   font-style: italic;
   font-size: 1.2em;
   margin-bottom: 0.3em;
   display: inline-block;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -100,9 +95,8 @@ textarea {
   box-sizing: border-box;
   width: 100%;
   margin-top: 0.2em;
-  font-style: normal; 
+  font-style: normal;
 }
-
 
 input::placeholder,
 select::placeholder,
@@ -117,7 +111,6 @@ textarea::placeholder {
   gap: 0.4em;
 }
 
-
 .checkbox-group label,
 .radio-group label {
   display: flex;
@@ -128,14 +121,13 @@ textarea::placeholder {
 
 .checkbox-group input[type="checkbox"],
 .radio-group input[type="radio"] {
-  order: 2; 
+  order: 2;
 }
 
 .checkbox-group label span,
 .radio-group label span {
   order: 1;
 }
-
 
 .checkbox-group label {
   flex-direction: row-reverse;
@@ -146,15 +138,16 @@ textarea::placeholder {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .radio-item {
-    display: block;
-    margin-bottom: 8px;
-    cursor: pointer;
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .radio-item input[type="radio"] {
-    margin-right: 8px; 
-    vertical-align: middle;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* Gomb */
@@ -174,7 +167,6 @@ button:hover {
   background-color: #b39718;
   color: white;
 }
-
 
 main {
   grid-area: szekciok;
@@ -215,7 +207,6 @@ section img.float-image {
   width: 40%;
   border-radius: 10px;
 }
-
 
 footer {
   grid-area: footer;
