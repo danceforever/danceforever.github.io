@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baranyi Eszter | Házi feladat 6</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header id="fejlec">
+            <img src="img/strand.jpg" alt="Strandolós kép">
+        </header>
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#Balcsi">Balaton</a></li>
+                    <li><a href="#Tisza-to">Tisza-tó</a></li>
+                    <li><a href="#Szelidi-to">Szelidi-tó</a></li>
+                </ul>
+            </nav>
+
+
+            <h2>Kérem töltse ki a jelentkezési űrlapot</h2>
+            <form>
+
+                <div class="form-section">
+                    <label for="nev">Név</label>
+                    <input type="text" id="nev" name="nev" maxlength="50" required placeholder="Pelda nev">
+                </div>
+
+                <div class="form-section">
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" name="email" maxlength="50" required placeholder="pelda@gmail.com">
+                </div>
+
+                <div class="form-section">
+                    <label for="telefon">Telefonszám</label>
+                    <input type="tel" id="telefon" name="telefon" maxlength="20" required placeholder="+36201234567">
+                </div>
+
+                <div class="form-section">
+                    <label for="to">Melyik tó érdekli?</label>
+                    <select id="to" name="to" required>
+                        <option value="">-- Válasszon --</option>
+                        <option value="balaton">Balaton</option>
+                        <option value="tisza">Tisza-tó</option>
+                        <option value="szelidi">Szelidi-tó</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <label>Milyen szállást keres?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="szallas" value="szalloda"><span>Szálloda</span></label>
+                        <label><input type="checkbox" name="szallas"
+                                value="apartmanhaz"><span>Apartmanház</span></label>
+                        <label><input type="checkbox" name="szallas" value="kemping"><span>Kemping</span></label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Milyen ellátást kér?</label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="teljes" name="ellatas" value="teljes">
+                        Teljes ellátás
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="fel" name="ellatas" value="fel">
+                        Félpanzió
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="reggeli" name="ellatas" value="reggeli">
+                        Csak reggeli
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" id="semmi" name="ellatas" value="semmi">
+                        Nem kérek ellátást
+                    </label>
+                </div>
+
+
+
+                <div class="form-section">
+                    <label for="uzenet">Egyéb üzenet</label>
+                    <textarea id="uzenet" name="uzenet" rows="4"
+                        placeholder="Ide írhatja az egyéb üzenetét!"></textarea>
+                </div>
+
+                <button type="submit">Mehet</button>
+            </form>
+        </aside>
+
+        <main>
+            <section id="Balcsi">
+                <h2>Balaton</h2>
+                <p>A Balaton Közép-Európa legnagyobb édesvízi tava, és Magyarország egyik legnépszerűbb nyaralóhelye.
+                    <img src="img/balaton.jpg" alt="Balaton" class="float-image" />
+                    Partján számos hangulatos város és falu található, például Siófok, Balatonfüred és Keszthely. A
+                    nyári hónapokban sokan érkeznek ide, hogy fürdőzzenek, napozzanak vagy hajókázzanak a tavon. A
+                    Balaton sekély vize gyorsan felmelegszik, ezért különösen kedvelt a családok körében. Az északi part
+                    dombos, szőlőkkel borított, míg a déli part lapos és homokos strandokkal csábít. A tó környéke remek
+                    lehetőséget kínál kerékpározásra, túrázásra és vitorlázásra is. Ősszel és tavasszal csendesebb, de
+                    ilyenkor is gyönyörű a táj. Télen, amikor befagy a tó, korcsolyázni és sétálni is lehet a jégen, ami
+                    igazán különleges élmény.
+                </p>
+            </section>
+
+            <section id="Tisza-to">
+                <h2>Tisza-tó</h2>
+                <p>A Tisza-tó Magyarország második legnagyobb tava, amely mesterségesen jött létre a Tisza folyó
+                    felduzzasztásával. <img src="img/tiszato.jpg" alt="Tisza-tó" class="float-image" /> A tó
+                    különlegessége, hogy természeti szépsége mellett rendkívül gazdag növény- és
+                    állatvilággal rendelkezik. Itt található az egyik legváltozatosabb vízi élőhely hazánkban, ami miatt
+                    a természetkedvelők és madármegfigyelők is szívesen látogatják. A Tisza-tó környékén számos
+                    kerékpár- és túraútvonal várja a kirándulókat. A vízisportok kedvelői is megtalálják a számításukat,
+                    hiszen lehet kajakozni, csónakázni vagy horgászni. A tó mellett fekvő Poroszló és Tiszafüred
+                    népszerű üdülőhelyek. A Tisza-tavi Ökocentrumban sok érdekességet megtudhatunk a tó élővilágáról. A
+                    Tisza-tó nemcsak nyáron, hanem egész évben kiváló kikapcsolódási lehetőséget nyújt a természet és a
+                    víz.</p>
+            </section>
+
+            <section id="Szelidi-to">
+                <h2>Szelidi-tó</h2>
+                <p>A Szelidi-tó a Duna közelében, Bács-Kiskun megyében található, és egyike Magyarország természetes
+                    eredetű tavai közül. <img src="img/szelidi.jpg" alt="Szelidi-tó" class="float-image" /> Sekély vize
+                    nyáron gyorsan felmelegszik, ezért különösen kedvelt fürdőzőhely a
+                    családok körében. A tó partján homokos strand és jól kiépített üdülőterület várja a pihenni
+                    vágyókat. A környék csendes, nyugodt hangulata ideális azok számára, akik szeretnének elvonulni a
+                    város zajától. A Szelidi-tó nemcsak fürdőzésre, hanem horgászatra is kiválóan alkalmas. A tó körüli
+                    tanösvény és természetvédelmi terület remek lehetőséget kínál sétákra és madármegfigyelésre. Nyáron
+                    gyakran tartanak rendezvényeket és kisebb fesztiválokat, így a szórakozásról sem kell lemondani. A
+                    Szelidi-tó egyszerre nyújt természetközeli élményt és kellemes kikapcsolódást minden korosztály
+                    számára.</p>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2025 Minden jog fenntartva | Készítette: Baranyi Eszter
+        </footer>
+    </div>
+</body>
+
+</html>

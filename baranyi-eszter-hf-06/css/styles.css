@@ -1,0 +1,252 @@
+body {
+  background-color: #D7B520;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside szekciok"
+    "footer footer";
+  grid-template-columns: 30% 70%;
+  max-width: 80%;
+  margin: 2em auto;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 1em;
+}
+
+header {
+  grid-area: header;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+  background-color: #e5e5e5;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+aside {
+  grid-area: aside;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: #5a9bd5;
+  color: #333;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+  display: block;
+}
+
+aside nav li {
+  margin-bottom: 0.5em;
+}
+
+aside nav a {
+  display: block;
+  padding: 0.5em 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 0.4em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.2em;
+  font-style: normal;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  font-style: italic;
+  color: #999;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  order: 2;
+}
+
+.checkbox-group label span,
+.radio-group label span {
+  order: 1;
+}
+
+.checkbox-group label {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.radio-group label {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.radio-item {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Gomb */
+button {
+  margin-top: 1em;
+  padding: 0.6em;
+  background-color: #D7B520;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b39718;
+  color: white;
+}
+
+main {
+  grid-area: szekciok;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Szekciók */
+section {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+}
+
+#Balcsi {
+  background-color: #fbe3d3;
+}
+
+#Tisza-to {
+  background-color: #fff1c4;
+}
+
+#Szelidi-to {
+  background-color: #ddeefb;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section img.float-image {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 40%;
+  border-radius: 10px;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1em;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+/* Reszponzív */
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "aside"
+      "szekciok"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  aside nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0;
+  }
+
+  aside nav a {
+    background-color: #eee;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  section img.float-image {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+  }
+}

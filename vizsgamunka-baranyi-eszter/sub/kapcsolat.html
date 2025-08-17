@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Végzetes Utazás | Szabadulószoba</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../img/favicon/site.webmanifest" />
+    <!--Css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!--SEO-->
+    <meta name="description" content="Végzetes Utazás - izgalmas szabadulószoba Kecskeméten. Gyilkosság, rejtély és kaland vár rád! Foglalj időpontot online!">
+    <meta property="og:title" content="Végzetes Utazás – Szabadulószoba Kecskemét" />
+    <meta property="og:description" content="Izgalmas szabadulószoba élmény, gyilkosság és rejtély vár rád. Foglalj időpontot online!" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+    <nav class="menu">
+        <div id="logo">
+            <a href="../index.html">Végzetes Utazás</a>
+        </div>
+        <ul class="navigation">
+            <li><a href="foglalas.html">Időpontfoglalás</a></li>
+            <li>
+                <a href="szabaduloszobak.html">Szabadulószobák</a>
+            </li>
+            <li><a href="kapcsolat.html">Kapcsolatfelvétel</a></li>
+        </ul>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <!--Kapcsolat-->
+    <header class="hero-kapcsolatfelvetel">
+        <div class="hero-kapcsolat">
+            <h1>Vedd fel velünk a kapcsolatot</h1>
+            <a href="#kapcsolatfelvetel" class="hero-button">Írj nekünk</a>
+        </div>
+    </header>
+    <section id="kapcsolatfelvetel">
+        <h2>Kapcsolatfelvétel</h2>
+        <p>Ha bármilyen kérdésed van a <strong>Végzetes utazás</strong> szabadulószobával kapcsolatban, vedd fel velünk
+            a kapcsolatot az alábbi űrlapon keresztül, vagy keress minket az elérhetőségeinken!</p>
+        <form>
+            <div class="form-row">
+                <label for="name">Név</label>
+                <input type="text" id="name" name="name" placeholder="Írd be a neved">
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Írd be az email címed">
+            </div>
+            <div class="form-row">
+                <label for="message">Üzenet</label>
+                <textarea id="message" name="message" placeholder="Írd ide az üzeneted"></textarea>
+            </div>
+            <a href="404.html" class="button-kapcsolat">Üzenet küldése</a>
+        </form>
+
+        <div class="elerhetoseg">
+            <p><strong>E-mail:</strong> vegzetes.utazas@gmail.com</p>
+            <p><strong>Telefon:</strong> 76/500-573</p>
+            <p><strong>Helyszín:</strong> Katona József Könyvtár, 2. emelet Európa gyűjtemény, Kecskemét, Piaristák tere
+                8.</p>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer class="main-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>Helyszín</h3>
+                <p>Katona József Könyvtár</p>
+                <p>6000 Kecskemét, Piaristák tere 8.</p>
+                <p><a href="https://maps.google.com" target="_blank">Mutasd a térképen</a></p>
+                <p><strong>Email:</strong> vegzetes.utazas@gmail.com</p>
+                <p><strong>Telefon:</strong> 76/500-573</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Nyitvatartás</h3>
+                <p><strong>Kedd:</strong> 9:00 – 18:00</p>
+                <p><strong>Szerda:</strong> 9:00 – 18:00</p>
+                <p><strong>Csütörtök:</strong> 9:00 – 18:00</p>
+                <p><strong>Péntek:</strong> 9:00 – 18:00</p>
+                <p><strong>Szombat:</strong> 9:00 – 18:00</p>
+                <p><em>Hétfő, Vasárnap: Zárva</em></p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="foglalas.html">Időpontfoglalás</a></li>
+                    <li><a href="szabaduloszobak.html">Szabadulószobák</a></li>
+                    <li><a href="kapcsolat.html">Kapcsolatfelvétel</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/konyvtar.kecskemet?locale=hu_HU" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/katonajozsefkonyvtar/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@bacstudastar" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:vegzetes.utazas@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Vizsgamunka | Baranyi Eszter</p>
+        </div>
+    </footer>
+    </footer>
+     <!-- JS -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
