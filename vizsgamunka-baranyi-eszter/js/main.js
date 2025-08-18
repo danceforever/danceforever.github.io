@@ -109,3 +109,23 @@ faqButtons.forEach((button) => {
     }
   });
 });
+
+//review card
+const container = document.querySelector('.review-scroll-container');
+
+let scrollAmount = 0;
+const speed = 1; // pixelek/frame
+
+function autoScroll() {
+  scrollAmount += speed;
+  
+  if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+    scrollAmount = 0; // visszaugrik az elejére
+  }
+
+  container.scrollLeft = scrollAmount; // sima scroll, nincs smooth
+  requestAnimationFrame(autoScroll);
+}
+
+// Indítjuk az animációt
+requestAnimationFrame(autoScroll);

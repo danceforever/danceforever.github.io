@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
 }
 
 body {
@@ -17,6 +16,7 @@ body {
 #logo {
     font-size: 22px;
     font-weight: 900;
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
 }
 
 #logo a {
@@ -59,6 +59,7 @@ ul.navigation {
 }
 
 ul.navigation li {
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     position: relative;
     margin: 0 10px;
 }
@@ -128,19 +129,21 @@ div.burger-menu:hover div {
 /* Tartalom szekciók index.html*/
 .szekcio {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     border-bottom: 2px solid #bc1717;
     align-items: center;
-    text-align: center;
+    line-height: 1.6;
     background-color: #222222;
     color: #F4F1ED;
-    padding: 40px 20px;
+    padding: 60px;
     margin: 40px 0;
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
-
+.szekcio h2{
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+}
 .szekcio:hover {
     transform: scale(1.02);
 }
@@ -161,6 +164,7 @@ div.burger-menu:hover div {
 }
 
 .section-button {
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     display: inline-block;
     text-align: center;
     background-color: #A22B2B;
@@ -208,6 +212,7 @@ div.burger-menu:hover div {
 }
 
 .hero-content {
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     position: relative;
     z-index: 2;
     padding: 40px;
@@ -317,6 +322,7 @@ div.burger-menu:hover div {
 }
 
 #map h2 {
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     font-size: 28px;
     color: #FF5C5C;
     margin-bottom: 10px;
@@ -331,6 +337,7 @@ div.burger-menu:hover div {
 }
 
 #map .mapp-b {
+     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     padding: 12px 30px;
     background-color: #bc1717;
     color: #F4F1ED;
@@ -386,70 +393,6 @@ div.burger-menu:hover div {
     opacity: 0.95;
 }
 
-/* Hírlevél index.html */
-#hirlevel {
-    background-color: #222222;
-    color: #F4F1ED;
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin: 40px 0;
-    text-align: center;
-}
-
-#hirlevel h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #D24C4C;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-#hirlevel form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.form-row input[type="text"],
-.form-row input[type="email"] {
-    padding: 12px 18px;
-    border-radius: 6px;
-    border: 2px solid #D24C4C;
-    background-color: #1A1A1A;
-    color: #F4F1ED;
-    font-size: 16px;
-    min-width: 220px;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.form-row input[type="text"]:focus,
-.form-row input[type="email"]:focus {
-    border-color: #E16A6A;
-    background-color: #2C3E50;
-    outline: none;
-    box-shadow: 0 0 8px #E16A6A;
-}
-
-.form-row a.button-link {
-    display: inline-block;
-    background-color: #bc1717;
-    color: #fff;
-    padding: 12px 28px;
-    font-weight: 700;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-size: 18px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.form-row a.button-link:hover {
-    background-color: #7B1A1A;
-}
-
 /*Vélemények index.html*/
 .reviews-section {
     background-color: #1c1c1c;
@@ -462,6 +405,7 @@ div.burger-menu:hover div {
 }
 
 .reviews-section h2 {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     color: #d24c4c;
     font-size: 32px;
     margin-bottom: 30px;
@@ -518,6 +462,70 @@ div.burger-menu:hover div {
     color: #ff4c4c;
     font-size: 14px;
 }
+/* Hírlevél index.html */
+#hirlevel {
+    background-color: #222222;
+    color: #F4F1ED;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+#hirlevel h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #D24C4C;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+#hirlevel form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: 2px solid #D24C4C;
+    background-color: #1A1A1A;
+    color: #F4F1ED;
+    font-size: 16px;
+    min-width: 220px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="email"]:focus {
+    border-color: #E16A6A;
+    background-color: #2C3E50;
+    outline: none;
+    box-shadow: 0 0 8px #E16A6A;
+}
+
+.form-row a.button-link {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    display: inline-block;
+    background-color: #bc1717;
+    color: #fff;
+    padding: 12px 28px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-row a.button-link:hover {
+    background-color: #7B1A1A;
+}
 
 /* sub folglalas */
 .booking-page {
@@ -529,6 +537,17 @@ div.burger-menu:hover div {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 0, 0, 0.9)),
         url('../img/foglalas.webp') center/cover no-repeat;
     color: #F4F1ED;
+}
+#booking-title{
+  font-size: 1.5rem;             
+  color: #ff4444;                
+  text-shadow: 0 0 10px #bc1717;  
+  margin-bottom: 2rem;           
+  font-weight: 800;               
+  letter-spacing: 2px;            
+  text-transform: uppercase;      
+  display: inline-block;          
+  padding-bottom: 0.5rem;
 }
 
 /* Sidebar sub foglalas*/
@@ -547,6 +566,7 @@ div.burger-menu:hover div {
 }
 
 .sidebar {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     background-color: rgba(12, 12, 12, 0.95);
     padding: 2rem;
     color: #F4F1ED;
@@ -669,8 +689,8 @@ div.burger-menu:hover div {
 }
 
 #submit {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     display: none;
-    /* alapból elrejtve */
     padding: 0.6rem 1.4rem;
     border: none;
     border-radius: 4px;
@@ -850,14 +870,15 @@ input:focus {
 
 .room-right {
     flex: 1;
-    gap: 0.8rem; /* kisebb, harmonikusabb távolság */
+    gap: 0.8rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .room-right h2 {
-    font-size: 2.2rem; /* kicsit kisebb, elegánsabb */
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    font-size: 2.2rem; 
     margin-bottom: 8px;
     color: #bc1717;
     text-shadow: 0 0 4px #bc1717;
@@ -865,12 +886,12 @@ input:focus {
 
 .room-right .subtitle {
     font-weight: 600;
-    margin-bottom: 6px; /* szorosabb kapcsolat a címhez */
+    margin-bottom: 6px; 
 }
 
 .room-right .description {
     margin-bottom: 12px;
-    line-height: 1.6; /* olvashatóbb, nem túl szellős */
+    line-height: 1.6; 
 }
 
 .room-info {
@@ -880,18 +901,19 @@ input:focus {
 }
 
 .room-info li {
-    margin-bottom: 0.4rem; /* kicsit közelebb a sorok */
+    margin-bottom: 0.4rem; 
     border-left: 3px solid #bc1717;
     padding-left: 0.5rem;
 }
 
 .book-btn {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     background-color: #bc1717;
     color: #F4F1ED;
     text-decoration: none;
     border: none;
     padding: 10px 14px;
-    max-width: 350px; /* ne legyen túl széles */
+    max-width: 350px; 
     font-weight: 700;
     cursor: pointer;
     border-radius: 6px;
@@ -900,7 +922,6 @@ input:focus {
     display: inline-block;
     text-align: center;
 }
-
 
 .book-btn:hover {
     background-color: #871E1E;
@@ -923,6 +944,7 @@ input:focus {
 }
 
 #kapcsolatfelvetel h2 {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     color: #FF5C5C;
     text-align: center;
     margin-bottom: 30px;
@@ -952,6 +974,7 @@ input:focus {
 }
 
 .button-kapcsolat {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     background: linear-gradient(45deg, #bc1717, #FF5C5C);
     color: #fff;
     padding: 12px 28px;
