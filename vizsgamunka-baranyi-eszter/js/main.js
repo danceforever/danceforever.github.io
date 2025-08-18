@@ -110,22 +110,31 @@ faqButtons.forEach((button) => {
   });
 });
 
+
 //review card
 const container = document.querySelector('.review-scroll-container');
+const reviews = document.querySelectorAll('.review-card');
 
 let scrollAmount = 0;
-const speed = 1; 
+const speed = 1;
+let animationId;
 
 function autoScroll() {
   scrollAmount += speed;
-  
+
   if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-    scrollAmount = 0; 
+    scrollAmount = 0;
   }
 
-  container.scrollLeft = scrollAmount; 
-  requestAnimationFrame(autoScroll);
+  container.scrollLeft = scrollAmount;
+  animationId = requestAnimationFrame(autoScroll);
 }
 
+animationId = requestAnimationFrame(autoScroll);
 
-requestAnimationFrame(autoScroll);
+reviews.forEach((review) => {
+  review.addEventListener('click', () => {
+
+    cancelAnimationFrame(animationId);
+  });
+});
