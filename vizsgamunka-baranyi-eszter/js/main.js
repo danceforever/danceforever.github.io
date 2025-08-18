@@ -114,18 +114,18 @@ faqButtons.forEach((button) => {
 const container = document.querySelector('.review-scroll-container');
 
 let scrollAmount = 0;
-const speed = 1; // pixelek/frame
+const speed = 1; 
 
 function autoScroll() {
   scrollAmount += speed;
   
   if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-    scrollAmount = 0; // visszaugrik az elejére
+    scrollAmount = 0; 
   }
 
-  container.scrollLeft = scrollAmount; // sima scroll, nincs smooth
+  container.scrollLeft = scrollAmount; 
   requestAnimationFrame(autoScroll);
 }
 
-// Indítjuk az animációt
+
 requestAnimationFrame(autoScroll);
