@@ -130,18 +130,23 @@ div.burger-menu:hover div {
 
 /* Hero index.html*/
 .hero {
-    background-image: url('../img/hero.webp');
-    background-size: cover;
-    background-position: center;
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F4F1ED;
     text-align: center;
     overflow: hidden;
-    animation: backgroundZoom 30s ease-in-out infinite alternate;
+    color: #F4F1ED;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .hero::before {
@@ -155,7 +160,7 @@ div.burger-menu:hover div {
 .hero-content {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding: 40px;
     max-width: 700px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -261,9 +266,14 @@ div.burger-menu:hover div {
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
-
 .szekcio h2 {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.szekcio p{
+    text-align: justify;
 }
 
 .szekcio:hover {
@@ -287,12 +297,14 @@ div.burger-menu:hover div {
 
 .section-button {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    display: inline-block;
+    display: block; 
+    max-width: 380px;;
     text-align: center;
     background-color: #A22B2B;
     color: #F4F1ED;
     text-decoration: none;
-    margin: 20px 0;
+    gap: 10px;
+    margin: 20px auto;
     padding: 12px 30px;
     border-radius: 6px;
     font-weight: bold;
@@ -302,6 +314,7 @@ div.burger-menu:hover div {
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 0 10px rgba(210, 76, 76, 0.4);
 }
+
 
 .section-button:hover {
     background-color: #871E1E;
@@ -538,53 +551,6 @@ div.burger-menu:hover div {
 }
 
 /* sub folglalas */
-#booking-title {
-    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    font-size: 1rem;
-
-    color: #ff4444;
-    text-shadow:
-        0 0 5px #ff4444,
-        0 0 10px #bc1717,
-        0 0 20px #7a0d0d;
-    line-height: 1.2;
-
-    margin-bottom: 2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-}
-
-#booking-title::after {
-    content: "";
-    display: block;
-    width: 80%;
-    margin: 0.5rem auto 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ff4444, transparent);
-    border-radius: 2px;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #ff4444, 0 0 10px #bc1717;
-    }
-
-    50% {
-        text-shadow: 0 0 15px #ff4444, 0 0 25px #bc1717;
-    }
-
-    100% {
-        text-shadow: 0 0 5px #ff4444, 0 0 10px #bc1717;
-    }
-}
-
-#booking-title {
-    animation: glow 2s infinite alternate;
-}
-
 .booking-page {
     display: flex;
     flex-direction: column;
@@ -596,7 +562,23 @@ div.burger-menu:hover div {
     color: #F4F1ED;
 }
 
+.booking-title {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    font-size: 2.5rem;
+    color: #ff5555;
+    text-shadow: 0 0 8px #990000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.booking-header {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
 /* Sidebar sub foglalas*/
+
 .sidebar-layout {
     display: flex;
     flex-direction: row;
@@ -911,9 +893,11 @@ input:focus {
 .lightbox {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -978,7 +962,7 @@ input:focus {
     text-decoration: none;
     border: none;
     padding: 10px 14px;
-    max-width: 350px;
+    max-width: 450px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 6px;
@@ -1145,90 +1129,3 @@ input:focus {
     color: #FF6A6A;
 }
 
-/*Mobilnézet */
-@media (max-width: 768px) {
-
-    /* Menü: hamburger  */
-    ul.navigation {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        background-color: rgba(0, 0, 0, 0.95);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-        border-radius: 8px;
-    }
-
-    ul.navigation.active {
-        display: flex;
-    }
-
-    div.burger-menu {
-        display: flex;
-    }
-
-    /* Szekciók*/
-    .szekcio,
-    .szekcio-reverse {
-        grid-template-columns: 1fr;
-        text-align: center;
-        direction: ltr;
-    }
-
-    .szekcio img,
-    .szekcio-reverse img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Hero */
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    /* Map */
-    #map {
-        padding: 20px 10px;
-    }
-
-    #map iframe {
-        min-height: 200px;
-    }
-
-    /* Hírlevél */
-    #hirlevel form {
-        flex-direction: column;
-    }
-
-    .form-row input[type="text"],
-    .form-row input[type="email"] {
-        min-width: 100%;
-    }
-
-    /* Vélemények */
-    .review-card {
-        min-width: 250px;
-    }
-
-    /* Sidebar foglalás */
-    .sidebar-layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        border-right: none;
-        border-bottom: 2px solid #bc1717;
-        width: 100%;
-    }
-
-    .booking-steps {
-        padding: 1rem;
-    }
-}

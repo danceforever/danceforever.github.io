@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// FAQ kezelése
+// GYIK kezelése
 const faqButtons = document.querySelectorAll('.faq-question');
 
 faqButtons.forEach((button) => {
@@ -110,10 +110,8 @@ faqButtons.forEach((button) => {
   });
 });
 
-
 //review card
 const container = document.querySelector('.review-scroll-container');
-const reviews = document.querySelectorAll('.review-card');
 
 let scrollAmount = 0;
 const speed = 1;
@@ -132,12 +130,10 @@ function autoScroll() {
 
 animationId = requestAnimationFrame(autoScroll);
 
-reviews.forEach((review) => {
-  review.addEventListener('click', () => {
-
-    cancelAnimationFrame(animationId);
-  });
+container.addEventListener('click', () => {
+  cancelAnimationFrame(animationId);
 });
+
 
 //lightbox
 const lightbox = document.querySelector('.lightbox');
