@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   escapeRooms.forEach(btn => {
     btn.addEventListener("click", () => {
       escapeRooms.forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected");  // kiválasztott szobának selected osztály
+      btn.classList.add("selected");  
       selectedRoom = btn.textContent;
     });
   });
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   timeSlots.forEach(btn => {
     btn.addEventListener("click", () => {
       timeSlots.forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected");  // kiválasztott időpontnak selected osztály
+      btn.classList.add("selected"); 
       selectedTime = btn.textContent;
     });
   });
@@ -140,26 +140,27 @@ reviews.forEach((review) => {
 });
 
 //lightbox
-const lightbox = document.getElementById('lightbox');
+const lightbox = document.querySelector('.lightbox');
 const lightboxImg = document.querySelector('.lightbox-img');
 const closeBtn = document.querySelector('.lightbox .close');
 
-// Thumbnailokra kattintás
-document.querySelectorAll('.thumbnails img, .main-image img').forEach(img => {
+document.querySelectorAll('.thumbnails img').forEach(img => {
     img.addEventListener('click', () => {
         lightbox.style.display = 'flex';
-        lightboxImg.src = img.src; // a nagy kép
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
     });
 });
 
-// Bezárás
 closeBtn.addEventListener('click', () => {
     lightbox.style.display = 'none';
+    lightboxImg.src = "";
 });
 
-// Overlay-re kattintva is bezárható
 lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
         lightbox.style.display = 'none';
+        lightboxImg.src = "";
     }
 });
+
