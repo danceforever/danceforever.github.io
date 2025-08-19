@@ -138,3 +138,28 @@ reviews.forEach((review) => {
     cancelAnimationFrame(animationId);
   });
 });
+
+//lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const closeBtn = document.querySelector('.lightbox .close');
+
+// Thumbnailokra kattintás
+document.querySelectorAll('.thumbnails img, .main-image img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src; // a nagy kép
+    });
+});
+
+// Bezárás
+closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+// Overlay-re kattintva is bezárható
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
