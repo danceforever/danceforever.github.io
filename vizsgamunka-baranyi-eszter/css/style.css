@@ -131,7 +131,7 @@ div.burger-menu:hover div {
     font-family: "Roboto", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 70px;
     border-bottom: 2px solid #bc1717;
     align-items: center;
     line-height: 1.6;
@@ -773,6 +773,7 @@ input:focus {
 }
 
 .faq-question {
+    font-family: "Roboto", sans-serif;
     width: 100%;
     background-color: #1c1c1c;
     border: 1px solid #D24C4C;
@@ -790,6 +791,7 @@ input:focus {
 }
 
 .faq-answer {
+    font-family: "Roboto", sans-serif;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -1025,12 +1027,14 @@ input:focus {
 }
 
 .footer-col {
+    font-family: "Roboto", sans-serif;
     flex: 1 1 200px;
     max-width: 300px;
     text-align: left;
 }
 
 .footer-col h3 {
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     color: #FF4C4C;
     margin-bottom: 10px;
