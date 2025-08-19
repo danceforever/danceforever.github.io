@@ -159,4 +159,3 @@ lightbox.addEventListener('click', (e) => {
         lightboxImg.src = "";
     }
 });
-
