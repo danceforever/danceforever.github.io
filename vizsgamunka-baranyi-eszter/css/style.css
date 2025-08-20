@@ -957,6 +957,7 @@ input:focus {
     background-color: #bc1717;
     color: #F4F1ED;
     text-decoration: none;
+    text-transform: uppercase;
     border: none;
     padding: 10px 14px;
     max-width: 450px;
