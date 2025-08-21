@@ -129,7 +129,7 @@ div.burger-menu:hover div {
 }
 
 /* Hero index.html*/
-.hero {
+.home-hero {
     position: relative;
     height: 100vh;
     display: flex;
@@ -149,7 +149,7 @@ div.burger-menu:hover div {
     z-index: 0;
 }
 
-.hero::before {
+.home-hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -157,7 +157,7 @@ div.burger-menu:hover div {
     z-index: 1;
 }
 
-.hero-content {
+.home-hero-content {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     position: relative;
     z-index: 1;
@@ -167,7 +167,7 @@ div.burger-menu:hover div {
     animation: fadeScaleIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.hero h1 {
+.home-hero-content h1 {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     font-size: 3rem;
     margin-bottom: 20px;
@@ -175,7 +175,7 @@ div.burger-menu:hover div {
     animation: heroTitleFloat 4s ease-in-out infinite;
 }
 
-.hero p {
+.home-hero-content p {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -183,7 +183,7 @@ div.burger-menu:hover div {
     text-shadow: 1px 1px 6px #000;
 }
 
-.hero-btn {
+.home-hero-btn {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     background-color: #bc1717;
     color: #fff;
@@ -195,7 +195,7 @@ div.burger-menu:hover div {
     animation: pulse 3s ease-in-out infinite;
 }
 
-.hero-btn:hover {
+.home-hero-btn:hover {
     background-color: #7B1A1A;
 }
 
@@ -252,12 +252,13 @@ div.burger-menu:hover div {
 
 
 /* Tartalom szekciók index.html*/
-.szekcio {
+.home-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     border-bottom: 2px solid #bc1717;
     align-items: center;
+    grid-template-areas: "picture text";
     line-height: 1.6;
     background-color: #222222;
     color: #F4F1ED;
@@ -266,39 +267,45 @@ div.burger-menu:hover div {
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
-.szekcio h2 {
+
+.home-section h2 {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
-.szekcio p{
+.home-section p {
     text-align: justify;
 }
 
-.szekcio:hover {
+.home-section:hover {
     transform: scale(1.02);
 }
 
-.szekcio-kep img {
+.home-section .section-picture {
+    grid-area: picture;
+}
+
+.home-section .section-text {
+    grid-area: text;
+}
+
+.section-picture img {
     max-width: 600px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.szekcio-reverse {
-    direction: rtl;
-}
-
-.szekcio-reverse>* {
-    direction: ltr;
+.home-section:nth-of-type(even) {
+    grid-template-areas: "text picture";
 }
 
 .section-button {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    display: block; 
-    max-width: 380px;;
+    display: block;
+    max-width: 380px;
+    ;
     text-align: center;
     background-color: #A22B2B;
     color: #F4F1ED;
@@ -551,15 +558,9 @@ div.burger-menu:hover div {
 }
 
 /* sub folglalas */
-.booking-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 0, 0, 0.9)),
-        url('../img/foglalas.webp') center/cover no-repeat;
-    color: #F4F1ED;
+.booking-header {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .booking-title {
@@ -571,9 +572,15 @@ div.burger-menu:hover div {
     text-align: center;
 }
 
-.booking-header {
-    width: 100%;
-    margin-bottom: 1rem;
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 0, 0, 0.9)),
+        url('../img/foglalas.webp') center/cover no-repeat;
+    color: #F4F1ED;
 }
 
 /* Sidebar sub foglalas*/
@@ -823,13 +830,11 @@ input:focus {
 /* Sub Szabadulószobák */
 .room-detail {
     display: flex;
+    flex-wrap: wrap;       
+    gap: 4rem;            
     padding: 2rem;
-    background-color: #121212;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     color: #F4F1ED;
 }
-
 .room-detail:nth-of-type(odd) {
     background-color: #121212;
 }
@@ -839,25 +844,22 @@ input:focus {
 }
 
 .room-left {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; 
     gap: 40px;
 }
 
 .main-image {
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    width: 100%;         
+    max-width: 700px;    
 }
 
 .main-image img {
-    max-width: 80%;
-    width: 700px;
-    display: block;
+    width: 100%;        
     border-radius: 8px;
     border: 2px solid #bc1717;
     box-shadow: 0 0 15px rgba(188, 23, 23, 0.5);
@@ -868,9 +870,9 @@ input:focus {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-    justify-content: center;
     flex-wrap: wrap;
-    max-width: 700px;
+    justify-content: center; 
+    width: 100%;            
 }
 
 .thumbnails img {
@@ -888,38 +890,12 @@ input:focus {
     box-shadow: 0 0 15px rgba(188, 23, 23, 0.8);
 }
 
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 80%;
-}
-
-.lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-
 .room-right {
-    flex: 1;
-    gap: 0.8rem;
+    flex: 1 1 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 0;
 }
 
 .room-right h2 {
@@ -930,19 +906,29 @@ input:focus {
     text-shadow: 0 0 4px #bc1717;
 }
 
-.room-right .subtitle {
-    font-weight: 600;
-    margin-bottom: 6px;
+.room-right .description {
+    display: flex;
+    gap: 4rem; 
+    padding: 2rem;
+    text-align: justify;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border-left: 2px solid rgb(55, 53, 53);
+    color: #F4F1ED;
+    flex-wrap: wrap;
+}
+.room-detail:nth-of-type(odd) .room-right .description {
+    background-color: #121212 ;
 }
 
-.room-right .description {
-    margin-bottom: 12px;
-    line-height: 1.6;
+.room-detail:nth-of-type(even) .room-right .description {
+    background-color: #1a1a1a ;
 }
 
 .room-info {
     list-style: none;
     padding: 0;
+    margin-top: 15px;
     margin-bottom: 12px;
 }
 
@@ -1126,4 +1112,3 @@ input:focus {
 .social-icons a:hover {
     color: #FF6A6A;
 }
-

@@ -19,6 +19,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!--Lightbox-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <!-- SEO -->
     <meta name="description"
         content="Végzetes Utazás - izgalmas szabadulószoba Kecskeméten. Gyilkosság, rejtély és kaland vár rád! Foglalj időpontot online!">
@@ -53,17 +58,19 @@
         <section class="room-detail">
             <div class="room-left">
                 <div class="main-image">
-                    <img src="../img/hgy_1.webp" alt="Helyismereti szabadulószoba fő kép">
+                    <a href="../img/hgy_1.webp" data-lightbox="escape-1-gallery" loading="lazy"><img
+                            src="../img/hgy_1.webp" alt="Szabadulószoba berendezés"></a>
                 </div>
                 <div class="thumbnails">
-                    <img src="../img/hgy_2.webp" alt="Thumbnail 1">
-                    <img src="../img/hgy_3.webp" alt="Thumbnail 2">
+                    <a href="../img/hgy_2.webp" data-lightbox="escape-1-gallery" loading="lazy"><img
+                            src="../img/hgy_2.webp" alt="Szabadulószoba játékos"></a>
+                    <a href="../img/hgy_3.webp" data-lightbox="escape-1-gallery" loading="lazy"><img
+                            src="../img/hgy_3.webp" alt="Szabadulószoba fogas"></a>
                 </div>
             </div>
 
             <div class="room-right">
                 <h2>Helyismereti szabadulószoba</h2>
-                <p class="subtitle">Miért volt végzetes az utazás?</p>
                 <p class="description">
                     Lépj be a múlt titokzatos világába, és oldj meg egy közel 100 éves rejtélyt! A "Végzetes utazás"
                     egy különleges, helyismereti szabadulós játék, ahol valódi könyvtári archívumokból származó nyomokat
@@ -85,17 +92,19 @@
         <section class="room-detail">
             <div class="room-left">
                 <div class="main-image">
-                    <img src="../img/blind1.webp" alt="Látássérülteknek és látóknak fő kép">
+                    <a href="../img/blind1.webp" data-lightbox="escape-2-gallery" loading="lazy"><img
+                            src="../img/blind1.webp" alt="Szabadulószoba berendezés"></a>
                 </div>
                 <div class="thumbnails">
-                    <img src="../img/blind2.webp" alt="Thumbnail 3">
-                    <img src="../img/blind3.webp" alt="Thumbnail 4">
+                    <a href="../img/blind2.webp" data-lightbox="escape-2-gallery" loading="lazy"><img
+                            src="../img/blind2.webp" alt="Szabadulószoba berendezés"></a>
+                    <a href="../img/blind3.webp" data-lightbox="escape-2-gallery" loading="lazy"><img
+                            src="../img/blind3.webp" alt="Szabadulószoba berendezés"></a>
                 </div>
             </div>
 
             <div class="room-right">
                 <h2>Látássérülteknek és látóknak</h2>
-                <p class="subtitle">Interaktív hangjáték, ahol nem a szemed, hanem a többi érzékszerved vezet!</p>
                 <p class="description">
                     Egy titokzatos vonatút 1931-ből… lezárt bőrönd, különös illatok, tárgyak és hangok, melyek
                     nyomozásra hívnak. Hallás, szaglás, tapintás és intuíció – minden nyom közelebb visz a megoldáshoz.
@@ -156,11 +165,6 @@
             <p>&copy; 2025 Vizsgamunka | Baranyi Eszter</p>
         </div>
     </footer>
-    <!-- Lightbox -->
-    <div class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-img" src="" alt="">
-    </div>
     <!-- JS -->
     <script src="../js/main.js"></script>
 </body>
