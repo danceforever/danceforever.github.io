@@ -805,6 +805,7 @@ input:focus {
     border-radius: 6px;
     color: #F4F1ED;
     padding: 0.8rem 1rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     text-align: left;
