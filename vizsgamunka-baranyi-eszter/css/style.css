@@ -290,6 +290,13 @@ div.burger-menu:hover div {
     grid-area: text;
 }
 
+.section-picture {
+    grid-area: picture;
+    max-width: 600px;
+    width: 100%;
+    justify-self: center;
+}
+
 .section-picture img {
     max-width: 600px;
     height: auto;
