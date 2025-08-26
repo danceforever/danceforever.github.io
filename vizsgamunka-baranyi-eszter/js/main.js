@@ -16,81 +16,131 @@ function toggleMenu() {
 
 //foglalás
 document.addEventListener("DOMContentLoaded", () => {
-  const steps = document.querySelectorAll(".step");
+  const steps = Array.from(document.querySelectorAll(".step"));
+  const indicators = Array.from(document.querySelectorAll(".step-indicator li"));
   let currentStep = 0;
 
   const escapeRooms = document.querySelectorAll(".escape-room");
-  const timeSlots = document.querySelectorAll(".time-slot");
+  const timeSlots   = document.querySelectorAll(".time-slot");
   let selectedRoom = "";
   let selectedTime = "";
 
-  const summaryRoom = document.getElementById("summary-room");
-  const summaryTeam = document.getElementById("summary-team");
+  const summaryRoom  = document.getElementById("summary-room");
+  const summaryTeam  = document.getElementById("summary-team");
   const summaryEmail = document.getElementById("summary-email");
-  const summaryDate = document.getElementById("summary-date");
-  const summaryTime = document.getElementById("summary-time");
+  const summaryDate  = document.getElementById("summary-date");
+  const summaryTime  = document.getElementById("summary-time");
 
-  // Szobák kiválasztása
+  //Szobák kiválasztása 
   escapeRooms.forEach(btn => {
     btn.addEventListener("click", () => {
       escapeRooms.forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected");  
-      selectedRoom = btn.textContent;
+      btn.classList.add("selected");
+      selectedRoom = btn.textContent.trim();
     });
   });
 
-  // Időpont kiválasztás
+  //időpont kiválasztás 
   timeSlots.forEach(btn => {
     btn.addEventListener("click", () => {
       timeSlots.forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected"); 
-      selectedTime = btn.textContent;
+      btn.classList.add("selected");
+      selectedTime = btn.textContent.trim();
     });
   });
 
-  function showStep(index) {
-    steps.forEach((step, i) => {
-      step.style.display = (i === index) ? "block" : "none";
+ 
+  function updateIndicators(index) {
+    if (!indicators.length) return;
+    indicators.forEach((li, i) => {
+      li.classList.toggle("active", i === index);
+      li.setAttribute("aria-current", i === index ? "step" : "false");
     });
-
-    // Foglalás gomb csak a STEP 3-nál
-    const submitBtn = document.getElementById("submit");
-    if (index === steps.length - 1) {
-      submitBtn.style.display = "inline-block";
-
-      // Összegzés frissítése
-      summaryRoom.textContent = selectedRoom || "-";
-      summaryTeam.textContent = document.getElementById("team-name").value;
-      summaryEmail.textContent = document.getElementById("email").value;
-      summaryDate.textContent = document.getElementById("calendar").value;
-      summaryTime.textContent = selectedTime || "-";
-    } else {
-      submitBtn.style.display = "none";
-    }
   }
 
+  function showStep(index) {
+    if (!steps.length) return;
+
+    steps.forEach((step, i) => {
+      step.style.display = (i === index) ? "" : "none";
+      step.setAttribute("aria-hidden", i === index ? "false" : "true");
+    });
+
+    updateIndicators(index);
+
+    // Foglalás gomb 
+    const submitBtn = document.getElementById("submit");
+    if (submitBtn) {
+      if (index === steps.length - 1) {
+        submitBtn.style.display = "inline-block";
+        // Összegzés frissítése
+        if (summaryRoom)  summaryRoom.textContent  = selectedRoom || "-";
+        if (summaryTeam)  summaryTeam.textContent  = (document.getElementById("team-name")?.value || "").trim();
+        if (summaryEmail) summaryEmail.textContent = (document.getElementById("email")?.value || "").trim();
+        if (summaryDate)  summaryDate.textContent  = (document.getElementById("calendar")?.value || "").trim();
+        if (summaryTime)  summaryTime.textContent  = selectedTime || "-";
+      } else {
+        submitBtn.style.display = "none";
+      }
+    }
+
+    
+    document.querySelector(".sidebar-layout")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // induláskor
   showStep(currentStep);
 
-  // Tovább és előző gombok
+  // Tovább és Előző gombok 
   document.querySelectorAll(".next").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentStep === 0 && !selectedRoom) return alert("Válassz szobát!");
-      if (currentStep === 1 && (!document.getElementById("calendar").value || !selectedTime)) return alert("Válassz dátumot és időpontot!");
-      if (currentStep === 2 && (!document.getElementById("team-name").value || !document.getElementById("email").value)) return alert("Add meg a csapat nevét és email címet!");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); 
+      if (currentStep === 0 && !selectedRoom) {
+        alert("Válassz szobát!");
+        return;
+      }
+      if (currentStep === 1) {
+        const dateOK = !!document.getElementById("calendar")?.value;
+        if (!dateOK || !selectedTime) {
+          alert("Válassz dátumot és időpontot!");
+          return;
+        }
+      }
+      if (currentStep === 2) {
+        const team = (document.getElementById("team-name")?.value || "").trim();
+        const mail = (document.getElementById("email")?.value || "").trim();
+        if (!team || !mail) {
+          alert("Add meg a csapat nevét és email címet!");
+          return;
+        }
+      }
       currentStep = Math.min(currentStep + 1, steps.length - 1);
       showStep(currentStep);
     });
   });
 
   document.querySelectorAll(".prev").forEach(btn => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); 
       currentStep = Math.max(currentStep - 1, 0);
       showStep(currentStep);
     });
   });
 
-  // Foglalás gomb átirányítás
-  document.getElementById("submit").addEventListener("click", () => {
+  // Sidebar lépésjelző 
+  indicators.forEach((li, idx) => {
+    li.style.cursor = "pointer";
+    li.addEventListener("click", () => {
+      if (idx <= currentStep) {
+        currentStep = idx;
+        showStep(currentStep);
+      }
+    });
+  });
+
+  //Foglalás gomb átirányítás 
+  document.getElementById("submit")?.addEventListener("click", (e) => {
+    e.preventDefault();
     window.location.href = "../sub/404.html";
   });
 });
