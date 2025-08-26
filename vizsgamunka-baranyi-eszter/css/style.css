@@ -1367,3 +1367,68 @@ textarea {
     }
 }
 
+/*Tablet nézet*/
+/* Tablet (601px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  /* Menü */
+  ul.navigation {
+    flex-direction: column;
+    gap: 12px;
+    position: static;
+    display: flex !important;   /* tableten ne legyen rejtve */
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    max-height: unset;
+  }
+
+  div.burger-menu {
+    display: none; /* tableten ne jelenjen meg a burger ikon */
+  }
+
+  /* Hero */
+  .home-hero-content {
+    text-align: center;
+    padding: 40px 25px;
+  }
+  .home-hero-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  /* Tartalom szekciók */
+  .home-section {
+    grid-template-columns: 1fr 1fr;  /* két oszlop tableten */
+    gap: 30px;
+    padding: 40px 25px;
+  }
+  .home-section:nth-of-type(even) {
+    grid-template-areas: "text picture";
+  }
+
+  /* Sidebar */
+  .sidebar-layout {
+    flex-direction: row;
+  }
+  .sidebar {
+    min-width: 220px;
+    border-right: 2px solid #bc1717;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  /* Footer */
+  .footer-columns {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .footer-col {
+    max-width: 45%;
+    text-align: left;
+  }
+}
