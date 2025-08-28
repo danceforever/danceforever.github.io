@@ -978,15 +978,14 @@ input:focus {
     padding: 40px 20px;
     border-top: 2px solid #bc1717;
     border-bottom: 2px solid #bc1717;
-    width: 100%;            
-    max-width: 600px;        
+    width: 100%;
+    max-width: 600px;     
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: floatForm 4s ease-in-out infinite alternate;
     text-align: center;
 }
-
 #kapcsolatfelvetel h1 {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     color: #FF5C5C;
