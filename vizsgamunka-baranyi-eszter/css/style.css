@@ -979,7 +979,7 @@ input:focus {
     border-top: 2px solid #bc1717;
     border-bottom: 2px solid #bc1717;
     width: 100%;
-    max-width: 600px;       /* Asztali nézeten max szélesség */
+    max-width: 800px;       /* Asztali nézeten max szélesség */
     margin: 0 auto;         /* Középre igazítás */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
