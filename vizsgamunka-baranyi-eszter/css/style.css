@@ -972,7 +972,8 @@ input:focus {
 
 /*sub kapcsolatfelvetel*/
 /*kapcsolatfelvetel form sub kapcsolatfelvetel*/
- background-color: #1c1c1c;
+#kapcsolatfelvetel {
+    background-color: #1c1c1c;
     color: #F4F1ED;
     padding: 40px 20px;
     border-top: 2px solid #bc1717;
@@ -983,6 +984,7 @@ input:focus {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
+    box-sizing: border-box; 
 }
 
 #kapcsolatfelvetel h1 {
