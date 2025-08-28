@@ -1340,17 +1340,31 @@ display: flex;
         margin: 0 6px;
     }
 @media (max-width: 768px) {
-  ul.navigation {
-    display: none; 
-  }
-  ul.navigation.active {
-    display: flex;
-    flex-direction: column;
-  }
-  div.burger-menu {
-    display: flex;
-  }
-}
+ ul.navigation {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(8px);
+        padding: 20px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    ul.navigation.active {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+    }
+    div.burger-menu {
+        display: flex;
+    }
 
 /* TABLET NÉZET: 601px - 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
