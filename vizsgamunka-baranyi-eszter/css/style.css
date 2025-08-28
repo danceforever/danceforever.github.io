@@ -1126,7 +1126,7 @@ display: flex;
 }
 
 /* MOBIL NÉZET: max-width 750px */
-@media (max-width: 600px) {
+@media (max-width: 750px) {
 
     /* Menü és burger */
     ul.navigation {
