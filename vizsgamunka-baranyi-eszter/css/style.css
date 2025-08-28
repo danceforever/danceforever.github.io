@@ -979,7 +979,7 @@ input:focus {
     border-top: 2px solid #bc1717;
     border-bottom: 2px solid #bc1717;
     max-width: 800px;
-    margin: 60px auto;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: floatForm 4s ease-in-out infinite alternate;
@@ -1062,11 +1062,10 @@ input:focus {
 }
 
 .footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+   display: flex;
+    justify-content: space-between; 
     gap: 60px;
-    margin-bottom: 30px;
+    flex-wrap: nowrap;
 }
 
 .footer-col {
@@ -1317,9 +1316,9 @@ input:focus {
 
     /* Footer */
     .footer-columns {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
     }
     .footer-col {
         max-width: 100%;
@@ -1524,8 +1523,8 @@ input:focus {
     /* Footer */
     .footer-columns {
         flex-direction: column;
-        gap: 30px;
-        align-items: center;
+      align-items: center;
+      gap: 30px;
     }
     .footer-col {
         max-width: 80%;
