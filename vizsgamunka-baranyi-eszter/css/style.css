@@ -1305,7 +1305,7 @@ display: flex;
     /* Kapcsolatfelvétel */
     #kapcsolatfelvetel {
         padding: 20px 15px;
-        max-width: 95%;
+        max-width: 700px;
     }
     #kapcsolatfelvetel h2 {
         font-size: 2rem;
