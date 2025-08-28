@@ -1066,11 +1066,10 @@ margin-bottom: 40px;
 }
 
 .footer-columns {
-display: flex;
-   justify-content: space-between;
-   gap: 60px;
-   flex-wrap: nowrap;
-   margin-bottom: 40px; 
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: nowrap;
 }
 
 .footer-col {
@@ -1521,6 +1520,10 @@ display: flex;
 
 /* 500px alatt: 1 oszlop */
 @media (max-width: 500px) {
+  .footer-columns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .footer-col {
     flex: 1 1 100%;
     max-width: 100%;
