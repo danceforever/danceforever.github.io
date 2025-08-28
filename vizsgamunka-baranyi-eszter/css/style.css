@@ -1131,7 +1131,7 @@ input:focus {
     /* Menü és burger */
     ul.navigation {
         display: flex;
-        /* mindig flex */
+
         flex-direction: column;
         gap: 16px;
         position: absolute;
@@ -1143,22 +1143,20 @@ input:focus {
         backdrop-filter: blur(8px);
         padding: 20px;
         max-height: 0;
-        /* alapból összehajtva */
+
         overflow: hidden;
         opacity: 0;
-        /* alapból láthatatlan */
+
         pointer-events: none;
-        /* ne lehessen kattintani, amíg zárva van */
+
         transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
     ul.navigation.active {
         max-height: 500px;
-        /* kinyitás */
         opacity: 1;
-        /* láthatóvá válik */
         pointer-events: auto;
-        /* kattinthatóvá válik */
+
     }
 
     div.burger-menu {
@@ -1315,8 +1313,8 @@ input:focus {
     }
 
     .thumbnails img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .room-right h2 {
@@ -1355,7 +1353,7 @@ input:focus {
 }
 
 
-/* TABLET NÉZET FINOMHANGOLT 751px - 1024px */
+/* TABLET NÉZET 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
 
     /* Menü */
@@ -1438,12 +1436,12 @@ input:focus {
     }
 
     .thumbnails img {
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 200px;
     }
 
     .room-right h2 {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         text-align: center;
     }
 
