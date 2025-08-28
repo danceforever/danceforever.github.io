@@ -1125,7 +1125,7 @@ display: flex;
     color: #FF6A6A;
 }
 
-/* MOBIL NÉZET: max-width 600px */
+/* MOBIL NÉZET: max-width 750px */
 @media (max-width: 600px) {
 
     /* Menü és burger */
@@ -1338,32 +1338,6 @@ display: flex;
     .social-icons a {
         font-size: 18px;
         margin: 0 6px;
-    }
-@media (max-width: 768px) {
- ul.navigation {
-        display: none;
-        flex-direction: column;
-        gap: 16px;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: rgba(20, 20, 20, 0.95);
-        backdrop-filter: blur(8px);
-        padding: 20px;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-    }
-    ul.navigation.active {
-        display: flex;
-        max-height: 500px;
-        opacity: 1;
-    }
-    div.burger-menu {
-        display: flex;
     }
 
 /* TABLET NÉZET: 601px - 1024px */
