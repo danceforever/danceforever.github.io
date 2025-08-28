@@ -979,22 +979,21 @@ input:focus {
     border-top: 2px solid #bc1717;
     border-bottom: 2px solid #bc1717;
     width: 100%;
-    max-width: 600px;     
-    margin: 0 auto;
+    max-width: 600px;       /* Asztali nézeten max szélesség */
+    margin: 0 auto;         /* Középre igazítás */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    animation: floatForm 4s ease-in-out infinite alternate;
     text-align: center;
 }
+
 #kapcsolatfelvetel h1 {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     color: #FF5C5C;
-    text-align: center;
     margin-bottom: 20px;
 }
 
 #kapcsolatfelvetel p {
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -1017,6 +1016,22 @@ input:focus {
     outline: none;
 }
 
+.button-kapcsolat {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    background: linear-gradient(45deg, #bc1717, #FF5C5C);
+    color: #fff;
+    padding: 12px 28px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px auto 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
 .button-kapcsolat:hover {
     background: linear-gradient(45deg, #FF5C5C, #bc1717);
     transform: scale(1.1);
@@ -1034,23 +1049,6 @@ input:focus {
 #kapcsolatfelvetel .form-row label {
     margin-bottom: 6px;
 }
-
-.button-kapcsolat {
-    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    background: linear-gradient(45deg, #bc1717, #FF5C5C);
-    color: #fff;
-    padding: 12px 28px;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin: 10px auto 25px;
-    text-align: center;
-    text-decoration: none;
-}
-
 
 /*footer*/
 .main-footer {
