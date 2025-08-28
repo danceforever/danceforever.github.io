@@ -1340,8 +1340,8 @@ display: flex;
         margin: 0 6px;
     }
 
-/* TABLET NÉZET: 601px - 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* TABLET NÉZET: 751px - 1024px */
+@media (min-width: 751px) and (max-width: 1024px) {
 
     /* Menü */
     nav.menu {
