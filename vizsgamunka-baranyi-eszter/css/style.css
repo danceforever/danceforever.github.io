@@ -1457,6 +1457,7 @@ margin-bottom: 40px;
     #kapcsolatfelvetel textarea {
         font-size: 1rem;
     }
+}
 /* 1000px alatt: 2 oszlop */
 @media (max-width: 1000px) {
   .footer-columns {
