@@ -312,7 +312,6 @@ div.burger-menu:hover div {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     display: block;
     max-width: 380px;
-    ;
     text-align: center;
     background-color: #A22B2B;
     color: #F4F1ED;
@@ -1131,7 +1130,6 @@ input:focus {
     /* Menü és burger */
     ul.navigation {
         display: flex;
-
         flex-direction: column;
         gap: 16px;
         position: absolute;
@@ -1143,12 +1141,9 @@ input:focus {
         backdrop-filter: blur(8px);
         padding: 20px;
         max-height: 0;
-
         overflow: hidden;
         opacity: 0;
-
         pointer-events: none;
-
         transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
@@ -1156,7 +1151,6 @@ input:focus {
         max-height: 500px;
         opacity: 1;
         pointer-events: auto;
-
     }
 
     div.burger-menu {
@@ -1183,21 +1177,18 @@ input:focus {
     }
 
     /* Tartalom szekciók */
-    .home-section {
+      .home-section {
         grid-template-columns: 1fr;
         grid-template-areas:
             "picture"
             "text";
-        gap: 20px;
-        padding: 20px 15px;
     }
 
     .home-section:nth-of-type(even) {
         grid-template-areas:
             "picture"
-            "text";
-    }
-
+            "text"; 
+}
     .section-picture img {
         max-width: 100%;
         height: auto;
@@ -1211,10 +1202,15 @@ input:focus {
 
     /* Map */
     #map {
-        padding: 20px 15px;
+        width: 100%;
+        max-width:100%;
+        margin: 30px auto 50px auto;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
     #map h2 {
+        margin-top: 5px;
         font-size: 20px;
     }
 
@@ -1289,7 +1285,7 @@ input:focus {
         font-size: 1.4rem;
     }
 
-    /*Szobák*/
+    /* Szobák */
     .room-detail {
         flex-direction: column;
         gap: 20px;
@@ -1336,27 +1332,9 @@ input:focus {
     }
 }
 
-/* Kapcsolatfelvétel */
-#kapcsolatfelvetel {
-    padding: 20px 15px;
-    max-width: 700px;
-}
 
-#kapcsolatfelvetel h2 {
-    font-size: 2rem;
-}
-
-#kapcsolatfelvetel p,
-#kapcsolatfelvetel input,
-#kapcsolatfelvetel textarea {
-    font-size: 0.95rem;
-}
-
-
-/* TABLET NÉZET 751px - 1024px */
+/* TABLET NÉZET: 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
-
-    /* Menü */
     nav.menu {
         padding: 12px 20px;
     }
@@ -1369,7 +1347,6 @@ input:focus {
         font-size: 13px;
     }
 
-    /* Hero */
     .home-hero-content {
         max-width: 600px;
         padding: 30px 20px;
@@ -1388,17 +1365,64 @@ input:focus {
         font-size: 0.95rem;
     }
 
-    /* Tartalom szekciók */
     .home-section {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "picture"
+            "text";
+    }
+
+    .home-section:nth-of-type(even) {
+        grid-template-areas:
+            "picture"
+            "text"; 
+    }
+    .section-picture img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #map {
+        max-width: 700px;
+        margin: 40px auto 60px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    #map h2 {
+           margin-top: 5px;
+        font-size: 20px;
+    }
+
+    #map h3,
+    #map .mapp-b {
+        font-size: 15px;
+    }
+}
+
+
+/* TARTALMI SZEKCIÓ: max-width 1250px */
+@media (max-width: 1250px) {
+      .home-section {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: "picture" "text";
+        grid-template-areas:
+            "picture"
+            "text";
         gap: 20px;
         padding: 20px;
     }
 
     .home-section:nth-of-type(even) {
-        grid-template-areas: "picture" "text";
+        grid-template-areas:
+            "picture"
+            "text"; 
     }
 
     .section-picture img {
@@ -1411,111 +1435,10 @@ input:focus {
         font-size: 14px;
         padding: 10px;
     }
-
-    /* Szabadulószobák (Room Detail) */
-    .room-detail {
-        flex-direction: column;
-        gap: 20px;
-        padding: 1rem;
-    }
-
-    .room-left,
-    .room-right {
-        flex: 1 1 100%;
-        padding-left: 0;
-    }
-
-    .main-image {
-        max-width: 100%;
-    }
-
-    .thumbnails {
-        gap: 8px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .thumbnails img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .room-right h2 {
-        font-size: 2.4rem;
-        text-align: center;
-    }
-
-    .room-right .description {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .book-btn {
-        width: 100%;
-        max-width: none;
-        padding: 12px 0;
-    }
-
-    /* Foglalás - Sidebar */
-    .sidebar-layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        border-right: none;
-        border-bottom: 2px solid #bc1717;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .booking-steps h2 {
-        font-size: 1.6rem;
-    }
-
-    .escape-rooms {
-        flex-direction: column;
-    }
-
-    .escape-room {
-        flex: 1 1 100%;
-        font-size: 1rem;
-    }
-
-    /* Időpont választó */
-    .time-slots {
-        flex-direction: column;
-    }
-
-    .time-slot {
-        font-size: 1rem;
-    }
-
-    /* Kapcsolatfelvétel */
-    #kapcsolatfelvetel {
-        padding: 25px 20px;
-        max-width: 700px;
-    }
-
-    #kapcsolatfelvetel h2 {
-        font-size: 1.6rem;
-    }
-
-    #kapcsolatfelvetel p,
-    #kapcsolatfelvetel input,
-    #kapcsolatfelvetel textarea {
-        font-size: 1rem;
-    }
-
-    /*Footer*/
-    .footer-columns {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
 
 
-/* 1000px alatt: 2 oszlop */
+/* LÁBLÉC: 1000px alatt */
 @media (max-width: 1000px) {
     .footer-columns {
         flex-wrap: wrap;
@@ -1530,7 +1453,8 @@ input:focus {
     }
 }
 
-/* 500px alatt: 1 oszlop */
+
+/* LÁBLÉC: 500px alatt */
 @media (max-width: 500px) {
     .footer-columns {
         flex-wrap: wrap;
