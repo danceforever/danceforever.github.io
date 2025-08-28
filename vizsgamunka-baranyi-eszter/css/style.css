@@ -1074,8 +1074,8 @@ display: flex;
 }
 
 .footer-col {
-    flex: 1 1 200px;
-    max-width: 300px;
+    flex: 1 1 30%;
+    max-width: 30%;
     text-align: left;
 }
 
@@ -1548,4 +1548,25 @@ display: flex;
         font-size: 18px;
         margin: 0 8px;
     }
+}
+/* 1000px alatt: 2 oszlop */
+@media (max-width: 1000px) {
+  .footer-columns {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* kicsit szorosabb tablet nézetben */
+  }
+  .footer-col {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* 500px alatt: 1 oszlop */
+@media (max-width: 500px) {
+  .footer-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center; 
+  }
 }
