@@ -1377,42 +1377,40 @@ margin-bottom: 40px;
 
     /* Szabadulószobák (Room Detail) */
     .room-detail {
-        flex-direction: row;
-        flex-wrap: wrap; /* wrap engedélyezve */
-        gap: 1rem;
+        flex-direction: column; /* tablet-en egy oszlop */
+        gap: 20px;
         padding: 1rem;
     }
     .room-left,
     .room-right {
-        flex: 1 1 45%; /* rugalmas szélesség */
-        min-width: 300px;
+        flex: 1 1 100%; /* teljes szélesség */
         padding-left: 0;
     }
     .main-image {
-        max-width: 90%;
+        max-width: 100%;
     }
     .thumbnails {
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
         flex-wrap: wrap;
     }
     .thumbnails img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
     .room-right h2 {
-        font-size: 2.2rem;
-        text-align: left;
+        font-size: 1.8rem;
+        text-align: center;
     }
     .room-right .description {
-        padding: 1rem;
         flex-direction: column;
+        padding: 1rem;
         gap: 1rem;
     }
     .book-btn {
-        width: auto;
-        max-width: 400px;
-        padding: 10px 14px;
+        width: 100%;
+        max-width: none;
+        padding: 12px 0;
     }
 
     /* Foglalás - Sidebar */
@@ -1458,6 +1456,7 @@ margin-bottom: 40px;
         font-size: 1rem;
     }
 }
+
 /* 1000px alatt: 2 oszlop */
 @media (max-width: 1000px) {
   .footer-columns {
