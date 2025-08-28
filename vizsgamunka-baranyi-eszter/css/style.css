@@ -1064,10 +1064,11 @@ input:focus {
 }
 
 .footer-columns {
-   display: flex;
-    justify-content: space-between; 
-    gap: 60px;
-    flex-wrap: nowrap;
+display: flex;
+   justify-content: space-between;
+   gap: 60px;
+   flex-wrap: nowrap;
+   margin-bottom: 40px; 
 }
 
 .footer-col {
@@ -1338,6 +1339,19 @@ input:focus {
         font-size: 18px;
         margin: 0 6px;
     }
+@media (max-width: 768px) {
+  ul.navigation {
+    display: none; 
+  }
+  ul.navigation.active {
+    display: flex;
+    flex-direction: column;
+  }
+  div.burger-menu {
+    display: flex;
+  }
+}
+
 /* TABLET NÉZET: 601px - 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
 
@@ -1511,7 +1525,7 @@ input:focus {
     /* Kapcsolatfelvétel */
     #kapcsolatfelvetel {
         padding: 25px 20px;
-        max-width: 95%;
+        max-width: 700px;    
     }
     #kapcsolatfelvetel h2 {
         font-size: 1.6rem;
