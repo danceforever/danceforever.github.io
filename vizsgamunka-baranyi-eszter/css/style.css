@@ -1360,7 +1360,28 @@ input:focus {
         padding: 12px 0;
         margin: 0 auto;
     }
+
+ #kapcsolatfelvetel {
+    max-width: 95%;         
+    margin: 40px auto;      
+    padding: 20px;          
+    box-sizing: border-box;
+  }
+
+  #kapcsolatfelvetel form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;              
+  }
+
+  #kapcsolatfelvetel input,
+  #kapcsolatfelvetel textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }
+
 
 /* TABLET NÉZET: 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
@@ -1433,6 +1454,26 @@ input:focus {
     #map .mapp-b {
         font-size: 15px;
     }
+
+    #kapcsolatfelvetel {
+    max-width: 700px;       
+    margin: 60px auto;      
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  #kapcsolatfelvetel form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  #kapcsolatfelvetel input,
+  #kapcsolatfelvetel textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
 }
 
 
@@ -1466,7 +1507,6 @@ input:focus {
     }
 }
 
-
 /* LÁBLÉC: 1000px alatt */
 @media (max-width: 1000px) {
     .footer-columns {
@@ -1481,7 +1521,6 @@ input:focus {
         text-align: center;
     }
 }
-
 
 /* LÁBLÉC: 500px alatt */
 @media (max-width: 500px) {
