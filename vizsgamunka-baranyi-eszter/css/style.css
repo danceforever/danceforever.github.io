@@ -1053,6 +1053,34 @@ input:focus {
 #kapcsolatfelvetel .form-row label {
     margin-bottom: 6px;
 }
+.elerhetoseg {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    color: #F4F1ED;
+}
+
+.elerhetoseg p {
+    margin: 10px 0;
+}
+
+.elerhetoseg strong {
+    color: #FF5C5C; 
+    margin-right: 5px;
+}
+
+.elerhetoseg a {
+    color: #F4F1ED;          
+    text-decoration: none;    
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+}
+
+.elerhetoseg a:hover {
+    color: #FF5C5C;           
+    border-bottom: 1px solid #FF5C5C; 
+    text-shadow: 0 0 5px rgba(255, 92, 92, 0.7);
+}
 
 /*footer*/
 .main-footer {
@@ -1201,14 +1229,16 @@ input:focus {
     }
 
     /* Map */
-    #map {
-        width: 100%;
-        max-width:100%;
-        margin: 30px auto 50px auto;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-
+#map {
+    width: 100%;
+    max-width: 95%;          
+    margin: 30px auto 50px auto;
+    padding: 15px;          
+    box-sizing: border-box;
+    background-color: #1c1c1c; 
+    border-radius: 10px;    
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
     #map h2 {
         margin-top: 5px;
         font-size: 20px;
@@ -1331,7 +1361,6 @@ input:focus {
         margin: 0 auto;
     }
 }
-
 
 /* TABLET NÉZET: 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
