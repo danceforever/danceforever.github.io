@@ -13,9 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -26,6 +23,9 @@
     <meta property="og:description"
         content="Izgalmas szabadulószoba élmény, gyilkosság és rejtély vár rád. Foglalj időpontot online!" />
     <meta property="og:type" content="website" />
+    <!--Footer ikonok-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -63,24 +63,26 @@
             </div>
             <div class="form-row">
                 <label for="message">Üzenet</label>
-                <textarea id="message" name="message" placeholder="Írd ide az üzeneted"></textarea>
+                <textarea id="message" name="message"  rows="5" placeholder="Írd ide az üzeneted"></textarea>
             </div>
+            <!-- A backend feldolgozás még nem része a feladatnak, ideiglenesen 404-re irányít -->
             <a href="404.html" class="button-kapcsolat">Üzenet küldése</a>
         </form>
 
-    <div class="elerhetoseg">
-    <p><strong>E-mail:</strong> 
-        <a href="mailto:vegzetes.utazas@gmail.com">vegzetes.utazas@gmail.com</a>
-    </p>
-    <p><strong>Telefon:</strong> 
-        <a href="tel:+3676500573">76/500-573</a>
-    </p>
-    <p><strong>Helyszín:</strong> 
-        <a href="https://www.google.com/maps?q=Katona+József+Könyvtár,+Kecskemét,+Piaristák+tere+8" target="_blank">
-            Katona József Könyvtár, Kecskemét, Piaristák tere 8.
-        </a>
-    </p>
-</div>
+        <div class="elerhetoseg">
+            <p><strong>E-mail:</strong>
+                <a href="mailto:vegzetes.utazas@gmail.com">vegzetes.utazas@gmail.com</a>
+            </p>
+            <p><strong>Telefon:</strong>
+                <a href="tel:+3676500573">76/500-573</a>
+            </p>
+            <p><strong>Helyszín:</strong>
+                <a href="https://www.google.com/maps?q=Katona+József+Könyvtár,+Kecskemét,+Piaristák+tere+8"
+                    target="_blank">
+                    Katona József Könyvtár, Kecskemét, Piaristák tere 8.
+                </a>
+            </p>
+        </div>
 
     </section>
     <!--Footer-->
@@ -90,7 +92,8 @@
                 <h3>Helyszín</h3>
                 <p>Katona József Könyvtár</p>
                 <p>6000 Kecskemét, Piaristák tere 8.</p>
-                            <p><a href="https://www.google.com/maps/place/Katona+J%C3%B3zsef+K%C3%B6nyvt%C3%A1r/@46.9094124,19.6890986,17z/data=!3m1!4b1!4m6!3m5!1s0x4743da10922c7b09:0xd8660ee59ef11a4b!8m2!3d46.9094088!4d19.6916735!16s%2Fg%2F12116t53?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Mutasd a térképen</a></p>
+                <p><a href="https://www.google.com/maps/place/Katona+J%C3%B3zsef+K%C3%B6nyvt%C3%A1r/@46.9094124,19.6890986,17z/data=!3m1!4b1!4m6!3m5!1s0x4743da10922c7b09:0xd8660ee59ef11a4b!8m2!3d46.9094088!4d19.6916735!16s%2Fg%2F12116t53?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank">Mutasd a térképen</a></p>
                 <p><strong>Email:</strong> <a href="mailto:vegzetes.utazas@gmail.com">vegzetes.utazas@gmail.com</a></p>
                 <p><strong>Telefon:</strong> <a href="tel:+3676500573">76/500-573</a></p>
             </div>

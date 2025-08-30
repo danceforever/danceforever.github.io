@@ -563,7 +563,7 @@ div.burger-menu:hover div {
     background-color: #7B1A1A;
 }
 
-/* sub folglalas */
+/* sub Folglalás */
 .booking-header {
     width: 100%;
     margin-bottom: 1rem;
@@ -589,7 +589,7 @@ div.burger-menu:hover div {
     color: #F4F1ED;
 }
 
-/* Sidebar sub foglalas*/
+/* Sidebar sub Foglalás*/
 .sidebar-layout {
     display: flex;
     flex-direction: row;
@@ -642,7 +642,7 @@ div.burger-menu:hover div {
     text-shadow: 0 0 8px #ff4444;
 }
 
-/* Form tartalom sub foglalas */
+/* Form tartalom sub Foglalás */
 .booking-steps {
     flex-grow: 1;
     padding: 2rem;
@@ -686,7 +686,7 @@ div.burger-menu:hover div {
 
 }
 
-/* Időpont választó sub foglalas */
+/* Időpont választó sub Foglalás */
 .booking-steps input,
 .time-slots {
     margin-top: 1.5rem;
@@ -715,7 +715,7 @@ div.burger-menu:hover div {
     box-shadow: 0 0 10px #bc1717;
 }
 
-/* Navigációs gomb sub foglalas */
+/* Navigációs gomb sub Foglalás */
 #submit {
     display: none;
     padding: 0.6rem 1.4rem;
@@ -969,8 +969,8 @@ input:focus {
     background-color: #871E1E;
 }
 
-/*sub kapcsolatfelvetel*/
-/*kapcsolatfelvetel form sub kapcsolatfelvetel*/
+/*sub Kapcsolatfelvétel*/
+/*kapcsolatfelvetel form sub Kapcsolatfelvétel*/
 #kapcsolatfelvetel {
     background-color: #1c1c1c;
     color: #F4F1ED;
@@ -1361,6 +1361,7 @@ input:focus {
         margin: 0 auto;
     }
 
+/*Kapcsolatfelvétel form*/
  #kapcsolatfelvetel {
     max-width: 95%;         
     margin: 40px auto;      
@@ -1385,6 +1386,7 @@ input:focus {
 
 /* TABLET NÉZET: 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
+    /*Menü*/
     nav.menu {
         padding: 12px 20px;
     }
@@ -1397,6 +1399,7 @@ input:focus {
         font-size: 13px;
     }
 
+/*Hero*/
     .home-hero-content {
         max-width: 600px;
         padding: 30px 20px;
@@ -1415,6 +1418,7 @@ input:focus {
         font-size: 0.95rem;
     }
 
+/*Tartalmi szekciók*/
     .home-section {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -1438,6 +1442,7 @@ input:focus {
         padding: 10px;
     }
 
+/*Map*/
     #map {
         max-width: 700px;
         margin: 40px auto 60px auto;
@@ -1454,7 +1459,7 @@ input:focus {
     #map .mapp-b {
         font-size: 15px;
     }
-
+/*Kapcsolatfevétel*/
     #kapcsolatfelvetel {
     max-width: 700px;       
     margin: 60px auto;      

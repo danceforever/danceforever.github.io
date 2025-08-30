@@ -151,12 +151,13 @@ const faqButtons = document.querySelectorAll('.faq-question');
 faqButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const answer = button.nextElementSibling;
-
-    if (answer.style.maxHeight) {
-      answer.style.maxHeight = null;
-    } else {
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    }
+if (answer.classList.contains("open")) {
+  answer.style.maxHeight = null;
+  answer.classList.remove("open");
+} else {
+  answer.style.maxHeight = answer.scrollHeight + "px";
+  answer.classList.add("open");
+}
   });
 });
 
