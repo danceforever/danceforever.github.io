@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentStep = 0;
 
   const escapeRooms = document.querySelectorAll(".escape-room");
-  const timeSlots   = document.querySelectorAll(".time-slot");
+  const timeSlots = document.querySelectorAll(".time-slot");
   let selectedRoom = "";
   let selectedTime = "";
 
-  const summaryRoom  = document.getElementById("summary-room");
-  const summaryTeam  = document.getElementById("summary-team");
+  const summaryRoom = document.getElementById("summary-room");
+  const summaryTeam = document.getElementById("summary-team");
   const summaryEmail = document.getElementById("summary-email");
-  const summaryDate  = document.getElementById("summary-date");
-  const summaryTime  = document.getElementById("summary-time");
+  const summaryDate = document.getElementById("summary-date");
+  const summaryTime = document.getElementById("summary-time");
 
   //Szobák kiválasztása 
   escapeRooms.forEach(btn => {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
- 
+
   function updateIndicators(index) {
     if (!indicators.length) return;
     indicators.forEach((li, i) => {
@@ -74,17 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index === steps.length - 1) {
         submitBtn.style.display = "inline-block";
         // Összegzés frissítése
-        if (summaryRoom)  summaryRoom.textContent  = selectedRoom || "-";
-        if (summaryTeam)  summaryTeam.textContent  = (document.getElementById("team-name")?.value || "").trim();
+        if (summaryRoom) summaryRoom.textContent = selectedRoom || "-";
+        if (summaryTeam) summaryTeam.textContent = (document.getElementById("team-name")?.value || "").trim();
         if (summaryEmail) summaryEmail.textContent = (document.getElementById("email")?.value || "").trim();
-        if (summaryDate)  summaryDate.textContent  = (document.getElementById("calendar")?.value || "").trim();
-        if (summaryTime)  summaryTime.textContent  = selectedTime || "-";
+        if (summaryDate) summaryDate.textContent = (document.getElementById("calendar")?.value || "").trim();
+        if (summaryTime) summaryTime.textContent = selectedTime || "-";
       } else {
         submitBtn.style.display = "none";
       }
     }
 
-    
+
     document.querySelector(".sidebar-layout")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tovább és Előző gombok 
   document.querySelectorAll(".next").forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault(); 
+      e.preventDefault();
       if (currentStep === 0 && !selectedRoom) {
         alert("Válassz szobát!");
         return;
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".prev").forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault(); 
+      e.preventDefault();
       currentStep = Math.max(currentStep - 1, 0);
       showStep(currentStep);
     });
@@ -145,21 +145,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// GYIK kezelése
-const faqButtons = document.querySelectorAll('.faq-question');
-
-faqButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const answer = button.nextElementSibling;
-if (answer.classList.contains("open")) {
-  answer.style.maxHeight = null;
-  answer.classList.remove("open");
-} else {
-  answer.style.maxHeight = answer.scrollHeight + "px";
-  answer.classList.add("open");
-}
+// FAQ animáció
+  const faqQuestions = document.querySelectorAll(".faq-question");
+  faqQuestions.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling;
+      answer.classList.toggle("open");
+    });
   });
-});
 
 //review card
 const container = document.querySelector('.review-scroll-container');

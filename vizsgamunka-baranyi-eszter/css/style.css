@@ -590,6 +590,34 @@ div.burger-menu:hover div {
 }
 
 /* Sidebar sub Foglalás*/
+/* sub Folglalás */
+.booking-header {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.booking-title {
+    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
+    font-size: 2.5rem;
+    color: #ff5555;
+    text-shadow: 0 0 8px #990000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 0, 0, 0.9)),
+        url('../img/foglalas.webp') center/cover no-repeat;
+    color: #F4F1ED;
+}
+
+/* Sidebar sub Foglalás*/
+/* Sidebar sub Foglalás*/
 .sidebar-layout {
     display: flex;
     flex-direction: row;
@@ -597,7 +625,7 @@ div.burger-menu:hover div {
     width: 100%;
     box-shadow: 0 4px 30px rgba(220, 0, 0, 0.4);
     border: 2px solid #bc1717;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     background-color: rgba(28, 28, 28, 0.9);
     backdrop-filter: blur(4px);
@@ -666,7 +694,7 @@ div.burger-menu:hover div {
     padding: 0.8rem 1.2rem;
     background-color: #1c1c1c;
     border: 1px solid #D24C4C;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #F4F1ED;
     font-weight: bold;
     cursor: pointer;
@@ -683,7 +711,6 @@ div.burger-menu:hover div {
     background-color: #bc1717;
     color: white;
     box-shadow: 0 0 10px #bc1717;
-
 }
 
 /* Időpont választó sub Foglalás */
@@ -701,7 +728,7 @@ div.burger-menu:hover div {
 .time-slot {
     padding: 0.6rem 1.4rem;
     border: 1px solid #D24C4C;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #1c1c1c;
     color: #F4F1ED;
     cursor: pointer;
@@ -720,17 +747,18 @@ div.burger-menu:hover div {
     display: none;
     padding: 0.6rem 1.4rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     background-color: #28a745;
     color: white;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 #submit:hover {
     background-color: #218838;
     box-shadow: 0 0 10px #28a745;
+    transform: scale(1.05);
 }
 
 .navigation {
@@ -744,7 +772,7 @@ div.burger-menu:hover div {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     padding: 0.6rem 1.4rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -755,6 +783,7 @@ div.burger-menu:hover div {
 .navigation button:hover {
     background-color: #ff3333;
     box-shadow: 0 0 10px #ff3333;
+    transform: scale(1.05);
 }
 
 .navigation button:disabled {
@@ -771,7 +800,14 @@ input[type="date"] {
     background-color: #111;
     border: 1px solid #D24C4C;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover {
+    border-color: #ff5555;
 }
 
 input:focus {
@@ -788,7 +824,7 @@ input:focus {
     padding: 1rem;
     background-color: rgba(28, 28, 28, 0.9);
     border: 2px solid #bc1717;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #F4F1ED;
 }
 
@@ -808,7 +844,7 @@ input:focus {
     width: 100%;
     background-color: #1c1c1c;
     border: 1px solid #D24C4C;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #F4F1ED;
     padding: 0.8rem 1rem;
     font-size: 1rem;
@@ -825,148 +861,14 @@ input:focus {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding-left: 1rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1rem;
     margin-top: 0.3rem;
 }
 
-.faq-answer p {
-    margin: 0.5rem 0;
-}
-
-/* Sub Szabadulószobák */
-.room-detail {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    padding: 2rem;
-    color: #F4F1ED;
-}
-
-.room-detail:nth-of-type(odd) {
-    background-color: #121212;
-}
-
-.room-detail:nth-of-type(even) {
-    background-color: #1a1a1a;
-}
-
-.room-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.main-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 700px;
-}
-
-.main-image img {
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid #bc1717;
-    box-shadow: 0 0 15px rgba(188, 23, 23, 0.5);
-    cursor: pointer;
-}
-
-.thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-.thumbnails img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border: 2px solid #bc1717;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.thumbnails img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(188, 23, 23, 0.8);
-}
-
-.room-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 0;
-}
-
-.room-right h2 {
-    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    color: #bc1717;
-    text-shadow: 0 0 4px #bc1717;
-}
-
-.room-right .description {
-    display: flex;
-    gap: 4rem;
-    padding: 2rem;
-    text-align: justify;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border-left: 2px solid rgb(55, 53, 53);
-    color: #F4F1ED;
-    flex-wrap: wrap;
-}
-
-.room-detail:nth-of-type(odd) .room-right .description {
-    background-color: #121212;
-}
-
-.room-detail:nth-of-type(even) .room-right .description {
-    background-color: #1a1a1a;
-}
-
-.room-info {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-    margin-bottom: 12px;
-}
-
-.room-info li {
-    margin-bottom: 0.4rem;
-    border-left: 3px solid #bc1717;
-    padding-left: 0.5rem;
-}
-
-.book-btn {
-    font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
-    background-color: #bc1717;
-    color: #F4F1ED;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    padding: 10px 14px;
-    max-width: 450px;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 6px;
-    box-shadow: 0 0 10px #bc1717;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    text-align: center;
-}
-
-.book-btn:hover {
-    background-color: #871E1E;
+.faq-answer.open {
+    max-height: 200px;
+    padding: 0.5rem 1rem;
 }
 
 /*sub Kapcsolatfelvétel*/
@@ -1024,7 +926,7 @@ input:focus {
     font-family: 'Cinzel', serif, Georgia, 'Times New Roman';
     background: linear-gradient(45deg, #bc1717, #FF5C5C);
     color: #fff;
-    padding: 12px 28px;
+    padding: 17px 30px;
     font-weight: 700;
     border: none;
     border-radius: 8px;
@@ -1053,6 +955,7 @@ input:focus {
 #kapcsolatfelvetel .form-row label {
     margin-bottom: 6px;
 }
+
 .elerhetoseg {
     margin-top: 20px;
     text-align: center;
@@ -1065,20 +968,20 @@ input:focus {
 }
 
 .elerhetoseg strong {
-    color: #FF5C5C; 
+    color: #FF5C5C;
     margin-right: 5px;
 }
 
 .elerhetoseg a {
-    color: #F4F1ED;          
-    text-decoration: none;    
+    color: #F4F1ED;
+    text-decoration: none;
     transition: all 0.3s ease;
     padding: 2px 4px;
 }
 
 .elerhetoseg a:hover {
-    color: #FF5C5C;           
-    border-bottom: 1px solid #FF5C5C; 
+    color: #FF5C5C;
+    border-bottom: 1px solid #FF5C5C;
     text-shadow: 0 0 5px rgba(255, 92, 92, 0.7);
 }
 
@@ -1205,7 +1108,7 @@ input:focus {
     }
 
     /* Tartalom szekciók */
-      .home-section {
+    .home-section {
         grid-template-columns: 1fr;
         grid-template-areas:
             "picture"
@@ -1215,8 +1118,9 @@ input:focus {
     .home-section:nth-of-type(even) {
         grid-template-areas:
             "picture"
-            "text"; 
-}
+            "text";
+    }
+
     .section-picture img {
         max-width: 100%;
         height: auto;
@@ -1229,16 +1133,17 @@ input:focus {
     }
 
     /* Map */
-#map {
-    width: 100%;
-    max-width: 95%;          
-    margin: 30px auto 50px auto;
-    padding: 15px;          
-    box-sizing: border-box;
-    background-color: #1c1c1c; 
-    border-radius: 10px;    
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
-}
+    #map {
+        width: 100%;
+        max-width: 95%;
+        margin: 30px auto 50px auto;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    }
+
     #map h2 {
         margin-top: 5px;
         font-size: 20px;
@@ -1361,31 +1266,32 @@ input:focus {
         margin: 0 auto;
     }
 
-/*Kapcsolatfelvétel form*/
- #kapcsolatfelvetel {
-    max-width: 95%;         
-    margin: 40px auto;      
-    padding: 20px;          
-    box-sizing: border-box;
-  }
+    /*Kapcsolatfelvétel form*/
+    #kapcsolatfelvetel {
+        max-width: 95%;
+        margin: 40px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-  #kapcsolatfelvetel form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;              
-  }
+    #kapcsolatfelvetel form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-  #kapcsolatfelvetel input,
-  #kapcsolatfelvetel textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+    #kapcsolatfelvetel input,
+    #kapcsolatfelvetel textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 }
 
 
 /* TABLET NÉZET: 751px - 1024px */
 @media (min-width: 751px) and (max-width: 1024px) {
+
     /*Menü*/
     nav.menu {
         padding: 12px 20px;
@@ -1399,7 +1305,7 @@ input:focus {
         font-size: 13px;
     }
 
-/*Hero*/
+    /*Hero*/
     .home-hero-content {
         max-width: 600px;
         padding: 30px 20px;
@@ -1418,7 +1324,7 @@ input:focus {
         font-size: 0.95rem;
     }
 
-/*Tartalmi szekciók*/
+    /*Tartalmi szekciók*/
     .home-section {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -1429,8 +1335,9 @@ input:focus {
     .home-section:nth-of-type(even) {
         grid-template-areas:
             "picture"
-            "text"; 
+            "text";
     }
+
     .section-picture img {
         max-width: 100%;
         height: auto;
@@ -1442,7 +1349,7 @@ input:focus {
         padding: 10px;
     }
 
-/*Map*/
+    /*Map*/
     #map {
         max-width: 700px;
         margin: 40px auto 60px auto;
@@ -1451,7 +1358,7 @@ input:focus {
     }
 
     #map h2 {
-           margin-top: 5px;
+        margin-top: 5px;
         font-size: 20px;
     }
 
@@ -1459,32 +1366,33 @@ input:focus {
     #map .mapp-b {
         font-size: 15px;
     }
-/*Kapcsolatfevétel*/
+
+    /*Kapcsolatfevétel*/
     #kapcsolatfelvetel {
-    max-width: 700px;       
-    margin: 60px auto;      
-    padding: 25px;
-    box-sizing: border-box;
-  }
+        max-width: 700px;
+        margin: 60px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
 
-  #kapcsolatfelvetel form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+    #kapcsolatfelvetel form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
 
-  #kapcsolatfelvetel input,
-  #kapcsolatfelvetel textarea {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-  }
+    #kapcsolatfelvetel input,
+    #kapcsolatfelvetel textarea {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+    }
 }
 
 
 /* TARTALMI SZEKCIÓ: max-width 1250px */
 @media (max-width: 1250px) {
-      .home-section {
+    .home-section {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -1497,7 +1405,7 @@ input:focus {
     .home-section:nth-of-type(even) {
         grid-template-areas:
             "picture"
-            "text"; 
+            "text";
     }
 
     .section-picture img {

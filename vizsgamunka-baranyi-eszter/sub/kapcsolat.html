@@ -52,7 +52,7 @@
         <h1>Kapcsolatfelvétel</h1>
         <p>Ha bármilyen kérdésed van a <strong>Végzetes utazás</strong> szabadulószobával kapcsolatban, vedd fel velünk
             a kapcsolatot az alábbi űrlapon keresztül, vagy keress minket az elérhetőségeinken!</p>
-        <form>
+        <form action="404.html" method="get">
             <div class="form-row">
                 <label for="name">Név</label>
                 <input type="text" id="name" name="name" placeholder="Írd be a neved" autocomplete="name">
@@ -63,10 +63,10 @@
             </div>
             <div class="form-row">
                 <label for="message">Üzenet</label>
-                <textarea id="message" name="message"  rows="5" placeholder="Írd ide az üzeneted"></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Írd ide az üzeneted"></textarea>
             </div>
             <!-- A backend feldolgozás még nem része a feladatnak, ideiglenesen 404-re irányít -->
-            <a href="404.html" class="button-kapcsolat">Üzenet küldése</a>
+            <button type="submit" class="button-kapcsolat">Üzenet küldése</button>
         </form>
 
         <div class="elerhetoseg">
