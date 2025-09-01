@@ -1192,32 +1192,32 @@ input:focus {
 
 /* MOBIL NÉZET: max-width 750px */
 @media (max-width: 750px) {
-
     /* Menü és burger */
-    ul.navigation {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        position:absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: rgba(20, 20, 20, 0.95);
-        backdrop-filter: blur(8px);
-        padding: 20px;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        pointer-events: none;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-    }
+ul.navigation {
+  display: flex;
+  flex-direction: column; 
+  gap: 16px;              
+  position: absolute;
+  top: 100%;              
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
 
-    ul.navigation.active {
-        max-height: 500px;
-        opacity: 1;
-        pointer-events: auto;
-    }
+ul.navigation.active {
+  max-height: 500px; 
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
     div.burger-menu {
         display: flex;
